@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Basic Styling for the header */
         header {
@@ -13,6 +15,7 @@
             display: flex;
             justify-content: space-between; /* Distribute logo/title and nav */
             align-items: center; /* Vertically align items */
+            position: relative; /* For positioning the menu */
         }
 
         .logo-title {
@@ -30,6 +33,14 @@
         .title {
             font-weight: bold; /* Keep the bold style */
             font-size: 1.2rem; /* Adjust size as needed */
+        }
+
+        /* Hamburger Menu Styles */
+        .menu-icon {
+            display: none; /* Hidden by default on larger screens */
+            font-size: 1.5rem;
+            margin-right: 20px;
+            cursor: pointer;
         }
 
         nav {
@@ -50,24 +61,30 @@
             background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
         }
 
-        /* Font Styling from your original code */
-        ul.navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+        /* Responsive Styles */
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            nav {
+                display: none; /* Hide nav on smaller screens */
+                position: absolute;
+                top: 100%; /* Position below the header */
+                left: 0;
+                width: 100%;
+                background-color: #002f6c; /* Match header background */
+                z-index: 1; /* Ensure menu is on top */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            }
 
-        ul.navbar li {
-            float: left;
-        }
+            nav.active {
+                display: block; /* Show menu when active */
+            }
 
-        ul.navbar li a {
-            /* These styles are already incorporated above */
-        }
+            nav a {
+                padding: 10px 15px; /* Adjust padding for smaller screens */
+            }
 
-        ul.navbar li a:hover {
-            /* This style is already incorporated above */
+            .menu-icon {
+                display: block; /* Show hamburger icon */
+            }
         }
     </style>
 </head>
@@ -78,6 +95,9 @@
             <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
             <span class="title">CMU Design and Fabrication</span>
         </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -85,6 +105,13 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
