@@ -15,7 +15,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
             width: 100%;
         }
 
@@ -36,7 +35,7 @@
             font-size: 1.2vw;
         }
 
-        /* Navigation Styles (Horizontal on larger screens) */
+        /* Navigation Styles (Horizontal) */
         nav {
             margin-right: 2%;
         }
@@ -56,47 +55,8 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* Hamburger Menu Styles (Hidden on larger screens) */
-        .menu-icon {
-            font-size: 1.5vw;
-            margin-right: 2%;
-            cursor: pointer;
-            display: none; /* Hidden on larger screens */
-            color: white;
-            transition: text-shadow 0.3s ease;
-        }
+                /* Hamburger Menu Styles (REMOVED) */
 
-        .menu-icon:hover,
-        .menu-icon.active {
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-        }
-
-        /* Responsive Styles (Hamburger Menu on smaller screens) */
-        @media (max-width: 768px) {
-            nav {
-                display: none; /* Hide nav on smaller screens */
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #002f6c;
-                z-index: 1;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            }
-
-            nav.active {
-                display: block; /* Show menu when active */
-            }
-
-            .menu-icon {
-                display: block; /* Show hamburger icon */
-            }
-
-            nav a {
-                display: block; /* Vertical alignment on smaller screens */
-                padding: 10px 15px; /* Adjust padding for smaller screens */
-            }
-        }
     </style>
 </head>
 <body>
@@ -106,27 +66,13 @@
             <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
             <span class="title">CMU Design and Fabrication</span>
         </div>
-        <a href="javascript:void(0);" class="icon menu-icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <nav id="myLinks">
+        <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-    </script>
 
 </body>
 </html>
