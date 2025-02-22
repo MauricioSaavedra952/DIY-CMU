@@ -3,43 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Menu</title>
+    <title>Mauricio Saavedra - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Styling for the navigation bar */
-        ul.navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: #333;
-            overflow: hidden;
-        }
-
-        ul.navbar li {
-            float: left;
-        }
-
-        ul.navbar li a {
-            display: block;
+        /* Basic Styling for the header */
+        header {
+            background-color: #002f6c;
             color: white;
-            padding: 14px 20px;
-            text-align: center;
-            text-decoration: none;
+            padding: 1% 0; /* Use percentages for padding */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
-        ul.navbar li a:hover {
-            background-color: #111;
+        .logo-title {
+            display: flex;
+            align-items: center;
+            margin-left: 2%; /* Use percentages for margin */
+        }
+
+        .logo {
+            max-height: 5%; /* Use percentages for logo height */
+            margin-right: 1%;
+            cursor: pointer;
+        }
+
+        .title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2vw; /* Use viewport units for scaling */
+            font-weight: bold;
+        }
+
+        /* Navigation Styles (Horizontal) */
+        nav {
+            margin-right: 2%; /* Use percentages for margin */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1%; /* Use percentages for margin */
+            padding: 1% 2%; /* Use percentages for padding */
+            display: inline-block; /* Horizontal alignment */
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-size: 1vw; /* Use viewport units for scaling */
+            font-family: 'Oswald', sans-serif; /* Use Oswald font */
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation menu -->
-    <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <header>
+        <div class="logo-title">
+            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+            <span class="title">CMU Design and Fabrication</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
 </body>
 </html>
