@@ -3,76 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Saavedra - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Website Menu</title>
     <style>
-        /* Basic Styling for the header */
-        header {
-            background-color: #002f6c;
+        /* Styling for the navigation bar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
             color: white;
-            padding: 1% 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .logo-title {
-            display: flex;
-            align-items: center;
-            margin-left: 2%;
-        }
-
-        .logo {
-            max-height: 5%;
-            margin-right: 1%;
-            cursor: pointer;
-        }
-
-        .title {
-            font-weight: bold;
-            font-size: 1.2vw;
-        }
-
-        /* Navigation Styles (Horizontal) */
-        nav {
-            margin-right: 2%;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1%;
-            padding: 1% 2%;
-            display: inline-block; /* Horizontal alignment */
-            transition: background-color 0.3s ease;
+            padding: 14px 20px;
             text-align: center;
-            font-size: 1vw;
+            text-decoration: none;
         }
 
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+        ul.navbar li a:hover {
+            background-color: #111;
         }
-
-                /* Hamburger Menu Styles (REMOVED) */
-
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-title">
-            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
-            <span class="title">CMU Design and Fabrication</span>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <!-- Navigation menu -->
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
 </body>
 </html>
