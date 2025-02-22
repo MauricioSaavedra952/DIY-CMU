@@ -1,9 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Menu</title>
+    <style>
+        /* Styling for the navigation bar */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
 <body>
-  <p>TEST SITE</p>
-  <video controls width="350">
-    <source src="test.mp4" type="video/mp4" />
-  </video>
-  <p>TEst again again three</p>
+
+    <!-- Navigation menu -->
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
 </body>
 </html>
