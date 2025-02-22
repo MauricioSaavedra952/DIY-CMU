@@ -96,7 +96,8 @@
             <span class="title">CMU Design and Fabrication</span>
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>  </div>
+            <i class="fas fa-bars"></i>
+        </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -105,13 +106,20 @@
         </nav>
     </header>
 
+    <noscript>  <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </noscript>
+
     <script>
         function toggleMenu() {
             const nav = document.querySelector('nav');
-            const menuIcon = document.querySelector('.menu-icon i'); // Select the <i> tag
+            const menuIcon = document.querySelector('.menu-icon i');
             nav.classList.toggle('active');
 
-            // Toggle between the bars and times icons
             if (nav.classList.contains('active')) {
                 menuIcon.classList.remove('fa-bars');
                 menuIcon.classList.add('fa-times');
