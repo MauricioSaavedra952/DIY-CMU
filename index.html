@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio Title</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">  <style>
+    <style>
         /* Basic Styling for the header */
         header {
             background-color: #002f6c; /* CMU Blue - adjust as needed */
@@ -28,9 +28,8 @@
         }
 
         .title {
-            font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+            font-weight: bold; /* Keep the bold style */
             font-size: 1.2rem; /* Adjust size as needed */
-            font-weight: bold;
         }
 
         nav {
@@ -41,15 +40,34 @@
             color: white;
             text-decoration: none;
             margin: 0 15px; /* Adjust spacing as needed */
-            padding: 5px 10px; /* Add some padding around links */
-            font-family: 'Oswald', sans-serif; /* Apply Oswald font */
-            transition: color 0.3s ease; /* Smooth transition for hover effect */
+            padding: 14px 20px; /* Match padding from your original hover effect */
+            display: block; /* Make the entire link area clickable */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            text-align: center; /* Center the text within the link */
         }
 
         nav a:hover {
-            color: #f0ad4e; /* Example hover color - adjust as needed */
-            text-decoration: none; /* remove underline */
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+        }
 
+        /* Font Styling from your original code */
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            /* These styles are already incorporated above */
+        }
+
+        ul.navbar li a:hover {
+            /* This style is already incorporated above */
         }
     </style>
 </head>
@@ -68,5 +86,5 @@
         </nav>
     </header>
 
-    </body>
+</body>
 </html>
