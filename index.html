@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio Title</title>
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">  <style>
         /* Basic Styling for the header */
         header {
             background-color: #002f6c; /* CMU Blue - adjust as needed */
@@ -28,6 +28,7 @@
         }
 
         .title {
+            font-family: 'Oswald', sans-serif; /* Apply Oswald font */
             font-size: 1.2rem; /* Adjust size as needed */
             font-weight: bold;
         }
@@ -41,10 +42,14 @@
             text-decoration: none;
             margin: 0 15px; /* Adjust spacing as needed */
             padding: 5px 10px; /* Add some padding around links */
+            font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+            transition: color 0.3s ease; /* Smooth transition for hover effect */
         }
 
         nav a:hover {
-            text-decoration: underline; /* Add underline on hover */
+            color: #f0ad4e; /* Example hover color - adjust as needed */
+            text-decoration: none; /* remove underline */
+
         }
     </style>
 </head>
@@ -52,7 +57,7 @@
 
     <header>
         <div class="logo-title">
-            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
+            <img src="your-logo.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
             <span class="title">CMU Design and Fabrication</span>
         </div>
         <nav>
