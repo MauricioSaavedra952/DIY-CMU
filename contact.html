@@ -1,92 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Saavedra - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Basic Styling for the header */
-        header {
-            background-color: #002f6c;
-            color: white;
-            padding: 20px 30px; /* Adjusted padding to px */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+<title>Email Link</title>
+<style>
+body {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0; /* Remove default margins */
+}
 
-        .logo-title {
-            display: flex;
-            align-items: center;
-            margin-left: 30px; /* Adjusted margin to px */
-        }
-
-        .logo {
-            max-height: 50px; /* Adjusted logo size to fixed px */
-            margin-right: 20px; /* Adjusted margin to px */
-            cursor: pointer;
-        }
-
-        .title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 24px; /* Set a fixed font size */
-            font-weight: bold;
-        }
-
-        /* Navigation Styles (Horizontal) */
-        nav {
-            margin-right: 30px; /* Adjusted margin to px */
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px; /* Adjusted margin to px */
-            padding: 10px 20px; /* Adjusted padding to px */
-            display: inline-block; /* Horizontal alignment */
-            transition: background-color 0.3s ease;
-            text-align: center;
-            font-size: 16px; /* Adjusted font size to px */
-            font-family: 'Oswald', sans-serif; /* Use Oswald font */
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
-        }
-    </style>
-    <style>
-    
-    #email-link {
-      transition: color 1s ease; /* Smooth color transition */
-      text-decoration: none; /* Remove underline from link */
-    }
-    </style>
+#email-link {
+  transition: color 1s ease; /* Smooth color transition */
+  text-decoration: none; /* Remove underline from link */
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-title">
-            <!-- Logo with click action to return to the homepage -->
-            <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
-            <span class="title">CMU Design and Fabrication</span>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>      
-    </header>
-<p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    
-    <h1 style = "text-align:center">Contact me at:</h1>
-    <p>&nbsp;</p>
-<h1 style = "text-align:center"><a id="email-link" href="mailto:mjsaaved@andrew.cmu.edu">mjsaaved@andrew.cmu.edu</a></h1>
+<h1><a id="email-link" href="mailto:your.email@example.com">your.email@example.com</a></h1>
 
 <script>
 const emailLink = document.getElementById('email-link');
@@ -99,5 +32,6 @@ function changeColor() {
 
 setInterval(changeColor, 2000); // Change color every 2 seconds
 </script>
+
 </body>
 </html>
