@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Saavedra - Portfolio</title>  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mauricio Saavedra - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <style>
         /* Basic Styling for the header */
         header {
@@ -37,10 +37,10 @@
 
         /* Hamburger Menu Styles */
         .menu-icon {
-            display: none; /* Hidden by default on larger screens */
             font-size: 1.5rem;
             margin-right: 20px;
             cursor: pointer;
+            display: none; /* Hide on larger screens */
         }
 
         nav {
@@ -78,10 +78,6 @@
                 display: block; /* Show menu when active */
             }
 
-            nav a {
-                padding: 10px 15px; /* Adjust padding for smaller screens */
-            }
-
             .menu-icon {
                 display: block; /* Show hamburger icon */
             }
@@ -95,10 +91,10 @@
             <img src="Celtic Knot Caledonia.png" alt="Logo" class="logo" onclick="window.location.href='index.html'">
             <span class="title">CMU Design and Fabrication</span>
         </div>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav>
+        <a href="javascript:void(0);" class="icon menu-icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <nav id="myLinks">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
@@ -106,26 +102,13 @@
         </nav>
     </header>
 
-    <noscript>  <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </noscript>
-
     <script>
-        function toggleMenu() {
-            const nav = document.querySelector('nav');
-            const menuIcon = document.querySelector('.menu-icon i');
-            nav.classList.toggle('active');
-
-            if (nav.classList.contains('active')) {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
             } else {
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
+                x.style.display = "block";
             }
         }
     </script>
