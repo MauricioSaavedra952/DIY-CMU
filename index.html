@@ -37,10 +37,17 @@
 
         /* Hamburger Menu Styles */
         .menu-icon {
-            font-size: 1.5rem;
-            margin-right: 20px;
+            font-size: 1.5vw; /* Adjust size as needed - viewport units */
+            margin-right: 2%;
             cursor: pointer;
             display: none; /* Hide on larger screens */
+            color: white; /* Hamburger icon is white */
+            transition: text-shadow 0.3s ease; /* Smooth transition for shadow */
+        }
+        
+        .menu-icon:hover,
+        .menu-icon.active { /* Apply shadow on hover and click (active state) */
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Subtle white shadow */
         }
 
         nav {
